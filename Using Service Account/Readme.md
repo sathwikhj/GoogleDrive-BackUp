@@ -6,6 +6,7 @@ This Dockerfile creates an image that allows you to run a Python script for back
 
 - Make sure to make the folder you want to upload is publicly accessible and where anyone with the link is an editor.
 - Get the <folder-id> by creating a folder where you want the data backed up and then get the tag after folder
+![Image to show how to retrieve folder-id](GoogleDrive-BackUp/Using Service Account/folder-id.png)
 - Replace <tags> in main.py to the required fields as given in comments.
 
 ### Run pyton file
