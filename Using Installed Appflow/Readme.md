@@ -36,6 +36,44 @@ Before building and running the Docker image, make sure you have the following:
   ```bash
   docker run -d <image_name>
   ```
+### Kubernetes using Cronjob and PVC to Backup folder at frequent time intervals
+- Make sure to make changes to the `cronjob.yaml` file before executing.
+- Have Kubernetes installed on docker.
+- Make sure the container is created and uploaded to docker registry.
+
+### To push container to docker registry
+```bash
+docker login
+```
+```bash
+docker tag <container-name> <your docker user name>/<container-name>
+```
+```bash
+docker push <your docker user name>/<container-name>
+```
+
+### To create and run a cronjob on Kubernetes
+```bash
+kubectl apply -f cronjob.yaml
+```
+### To get information about the cronjob
+```bash
+kubectl get cronjobs
+```
+### To get information about the pods running
+```bash
+kubectl get pods
+```
+### To get logs 
+```bash
+kubectl logs <pod-name>
+```
+### To delete cronjob
+```bash
+kubectl delete cronjob drive-backup
+```
+
+
 
 
   
