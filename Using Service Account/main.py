@@ -17,23 +17,23 @@ try:
     backup_date_folder_name = datetime.now().strftime("%d-%m-%Y_%H:%M:%S")
     file_metadata = {
         "name": backup_date_folder_name,
-        "parents": ["1iL1vzmXQMtsDxWVJ08YOnDC-08hhwVV-"],
+        "parents": ["<folder-id>"], #Add folder id as mentioned in the image
         "mimeType": "application/vnd.google-apps.folder"
     }
     datetime_folder = service.files().create(body=file_metadata, fields="id").execute()
     datetime_folder_id = datetime_folder.get('id')
 
-    assignment_folder_path = 'assignment'
+    assignment_folder_path = '<Folder-path>' #Provide path to the folder on the local system which you want backed up
     if not os.path.exists(assignment_folder_path):
         print("File not found")
     else:
         count=0
-        for filename in os.listdir('assignment'):
+        for filename in os.listdir('<Name of the directory>'): #Provide the name of the directory 
             file_metadata = {
                 "name": filename,
                 "parents": [datetime_folder_id]
             }
-            media = MediaFileUpload(f"assignment/{filename}")
+            media = MediaFileUpload(f"<Name of the directory>/{filename}") #Provide the name of the directory 
             upload_file = service.files().create(
                 body=file_metadata,
                 media_body=media,
