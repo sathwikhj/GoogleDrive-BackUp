@@ -30,7 +30,7 @@ kind: CronJob
 metadata:
   name: drive-backup
 spec:
-  schedule: "*/1 * * * *" 
+  schedule: "*/1 * * * *" #Backup every minute, change accordingly
   jobTemplate:
     spec:
       template:
