@@ -23,7 +23,7 @@ Before building and running the Docker image, make sure you have the following:
   ```
 - Run the container
   ```bash
-  docker build -t <image_name> .
+  docker run -d <image_name>
   ```
 
 ### Changes to be make before running
