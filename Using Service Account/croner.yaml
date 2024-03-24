@@ -1,0 +1,22 @@
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: drive-backup
+spec:
+  schedule: "*/1 * * * *" 
+  jobTemplate:
+    spec:
+      template:
+        spec:
+          containers:
+          - name: drive-backup
+            image: sathwikhj/my_drive_backup:latest
+            volumeMounts:
+            - name: shared-volume
+              mountPath: /app/assignment  # Mount path within the container
+            workingDir: /app
+          volumes:
+          - name: shared-volume
+            hostPath:
+              path: /Users/sathwik/Desktop/CC/CC_Project/assignment  # Path to the shared folder in your laptop
+          restartPolicy: OnFailure
