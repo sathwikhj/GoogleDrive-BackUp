@@ -8,7 +8,7 @@ spec:
   accessModes:
     - ReadWriteOnce
   hostPath:
-    path: /Users/sathwik/Desktop/CC/CC_Project/Using Installed Appflow/assignment  # Path to the shared folder in your laptop
+    path:   # Path to the shared folder
 
 ---
 
@@ -37,7 +37,7 @@ spec:
         spec:
           containers:
           - name: drive-backup
-            image: sathwikhj/drive_oauth:latest
+            image: <your docker user name>/<container-name>:latest #Add your own container here.
             volumeMounts:
             - name: shared-volume
               mountPath: /app/assignment  # Mount path within the container
