@@ -30,7 +30,6 @@ Before building and running the Docker image, make sure you have the following:
 
 You need to replace the following placeholders with your local paths:
 
-- Replace <main.py> with the local path to your main.py file.
-- Replace <local_path_to_credenti.json> with the local path to your credenti.json file.
-- Replace <local_path_to_api_tokens.json> with the local path to your api_tokens.json file.
+- Replace <tags> in main.py to the required fields as given in comments.
+
   
