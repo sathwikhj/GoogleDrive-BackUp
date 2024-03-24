@@ -1,6 +1,7 @@
 ## Google Drive Backup Script
 
-This Python script allows you to back up files to Google Drive using the Google Drive API.
+This Python script allows you to back up files to Google Drive using the Google Drive API.<br>
+This repository allows you to **containerise** the code and uses **Kubernetes** to backup in intervals of time.
 
 ### Prerequisites
 
