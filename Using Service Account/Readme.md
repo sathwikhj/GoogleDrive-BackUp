@@ -4,8 +4,8 @@ This Dockerfile creates an image that allows you to run a Python script for back
 
 ### Changes to be made before running
 
-You need to replace the following placeholders with your local paths:
-
+- Make sure to make the folder you want to upload is publicly accessible and where anyone with the link is an editor.
+- Get the <folder-id> by creating a folder where you want the data backed up and then get the tag after folder
 - Replace <tags> in main.py to the required fields as given in comments.
 
 ### Run pyton file
